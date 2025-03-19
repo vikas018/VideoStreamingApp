@@ -3,19 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Video Streaming App</title>
-  <link rel="stylesheet" href="./index.css">
+  <title>Mood Tracker</title>
+  <link rel="stylesheet" href="./index.css" />
 </head>
 <body>
   <header>
-    <h2>Video Streaming App</h2>
-    <div id="search-bar">
-      <input id="search-input" type="text" placeholder="Search Video" />
-      <button id="search-button" onclick="searchHandler()">Search</button>
-      <button id="clear-search" onclick="searchHandler('Clear')">Clear</button>
-    </div>
+    <h2>Daily Mood Tracker</h2>
+    <h3>Select your mood for today</h3>
   </header>
-  <div id="video-container"></div>
+  <div class="mood-container" id="moods">
+    <div class="mood" data-mood="😀">
+      <span>😀</span><span>Happy</span>
+    </div>
+    <div class="mood" data-mood="😢">
+      <span>😢</span><span>Sad</span>
+    </div>
+    <div class="mood" data-mood="😐">
+      <span>😐</span><span>Neutral</span>
+    </div>
+    <div class="mood" data-mood="😆">
+      <span>😆</span>
+      <span>Excited</span>
+    </div>
+  </div>
+  <button onclick="saveMood()">Save Mood</button>
+  <h2>Past Moods</h2>
+  <div class="filter-buttons">
+    <button onclick="filterMoods('day')">Day</button>
+    <button onclick="filterMoods('week')">Week</button>
+    <button onclick="filterMoods('month')">Month</button>
+  </div>
+  <div class="timeline" id="timeline"></div>
+  
+  <h2>Calendar View</h2>
+  <div class="calendar" id="calendar"></div>
   <script src="./index.js"></script>
 </body>
 </html>

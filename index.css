@@ -1,13 +1,12 @@
 body {
-  color: white;
   background-color: rgb(37, 39, 65);
+  font-family: Arial, sans-serif;
+  text-align: center;
+  color: white;
 }
 
 header {
   display: flex;
-  position: sticky;
-  z-index: 1000;
-  top: 0;
   flex-direction: column;
   padding: 15px 20px;
   font-family: Arial, sans-serif;
@@ -15,64 +14,32 @@ header {
   background-color:  rgb(37, 39, 65);
 }
 
-#search-bar input {
-  border: none;
-  text-indent: 10px;
-  padding: 12px 25px;
-  font-size: 16px;
-  font-weight: bold;
-  border-radius: 30px;
-}
-
-/* Responsive Styling */
-@media (max-width: 600px) {
-  #search-bar {
-    max-width: 90%;
-  }
-}
-
-#video-container {
+.mood-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 20px;
   padding: 20px;
 }
 
-#card {
+.mood {
   background: rgb(102, 105, 139);
-  padding: 10px;
-  border-radius: 10px;
+  padding: 40px;
+  border-radius: 50px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
 }
 
-#card:hover {
+.mood:hover {
   transform: scale(1.05);
 }
 
-#thumbnail {
-  width: 100%;
-  border-radius: 8px;
-  object-fit: cover;
+.mood.selected {
+  border-color: blue;
 }
 
-#video-title {
-  font-size: 1.2rem;
-  margin: 0;
-  padding-top: 10px;
-  padding-left: 10px;
-  font-weight: bold;
-  color: whitesmoke;
-  font-family: "Roboto", sans-serif;
-}
-
-#video-channel-name {
-  padding-top: 10px;
-  padding-left: 10px;
-  font-size: 0.9rem;
-  margin: 0;
-  color: wheat;
-  font-family: "Inter", sans-serif;;
+span {
+  display: flex;
+  justify-content: center;
 }
 
 button {
@@ -94,18 +61,23 @@ button:hover {
   transform: scale(1.05);
 }
 
-a {
-  text-decoration: none;
-}
 
-@media (max-width: 1024px) {
-  #video-container {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
 
-@media (max-width: 600px) {
-  #video-container {
-    grid-template-columns: repeat(1, 1fr);
-  }
+.timeline {
+  margin-top: 20px;
+}
+.filter-buttons {
+  margin: 10px;
+}
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+  max-width: 300px;
+  margin: auto;
+}
+.calendar div {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
 }
