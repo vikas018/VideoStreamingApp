@@ -1,8 +1,3 @@
-# Video Streaming App
-
-A simple and responsive video streaming application that fetches and displays videos from the FreeAPI YouTube endpoint. Users can search for videos, click on them to open YouTube, and clear their search.
-
----
 
 ## 🚀 Features
 
