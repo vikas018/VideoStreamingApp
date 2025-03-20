@@ -1,0 +1,111 @@
+body {
+  color: white;
+  background-color: rgb(37, 39, 65);
+}
+
+header {
+  display: flex;
+  position: sticky;
+  z-index: 1000;
+  top: 0;
+  flex-direction: column;
+  padding: 15px 20px;
+  font-family: Arial, sans-serif;
+  text-align: center;
+  background-color:  rgb(37, 39, 65);
+}
+
+#search-bar input {
+  border: none;
+  text-indent: 10px;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+}
+
+/* Responsive Styling */
+@media (max-width: 600px) {
+  #search-bar {
+    max-width: 90%;
+  }
+}
+
+#video-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  padding: 20px;
+}
+
+#card {
+  background: rgb(102, 105, 139);
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+#card:hover {
+  transform: scale(1.05);
+}
+
+#thumbnail {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+#video-title {
+  font-size: 1.2rem;
+  margin: 0;
+  padding-top: 10px;
+  padding-left: 10px;
+  font-weight: bold;
+  color: whitesmoke;
+  font-family: "Roboto", sans-serif;
+}
+
+#video-channel-name {
+  padding-top: 10px;
+  padding-left: 10px;
+  font-size: 0.9rem;
+  margin: 0;
+  color: wheat;
+  font-family: "Inter", sans-serif;;
+}
+
+button {
+  background: linear-gradient(135deg, #007BFF, #0056b3);
+  color: white;  
+  border: none;
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 1s ease;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  margin: 5px;
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0056b3, #004099);
+  transform: scale(1.05);
+}
+
+a {
+  text-decoration: none;
+}
+
+@media (max-width: 1024px) {
+  #video-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  #video-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
